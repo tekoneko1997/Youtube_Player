@@ -5,7 +5,7 @@ function Header() {
     return (
             <header className="mdl-layout__header">
                 <div className="mdl-layout__header-row">
-                    <span className="mdl-layout-title">Title</span>
+                    <span className="mdl-layout-title">Youtube Player</span>
                     <div className="mdl-layout-spacer"></div>
                     <SearchBar/>
                 </div>

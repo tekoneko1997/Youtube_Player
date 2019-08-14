@@ -3,7 +3,7 @@ https://developers.google.com/youtube/v3/docs/search/list?hl=ja
 /Search に関しては↑のサイトからAPIを確認
 */
 import YoutubeHttpClient from './index';
-export default class YoutubeApi {
+export default class SearchApi {
 
     async getSearchItems(termFromSearchBar){
         try {

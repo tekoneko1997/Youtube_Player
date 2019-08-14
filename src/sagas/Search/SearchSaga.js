@@ -1,11 +1,11 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { getSearchSuccess, getSearchFailed } from '../../actions/SearchAction'
-import YoutubeApi from '../../apis/YoutubeApi';
+import SearchApi from '../../apis/SearchApi';
 
-const youtubeApi = new YoutubeApi();
+const searchApi = new SearchApi();
 
 export function* getSearchItem(action) {
-    const response = yield call(youtubeApi.getSearchItems, action.data);
+    const response = yield call(searchApi.getSearchItems, action.data);
     if (response) {
         yield put(getSearchSuccess(response.data));
     }else{

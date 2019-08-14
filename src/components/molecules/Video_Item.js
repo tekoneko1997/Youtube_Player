@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import { setVideoSuccess } from '../../actions/VideoItem';
+import { setVideoRequest } from '../../actions/VideoAction';
 import '../../styles/video.css';
 
 function VideoItem(props){
     const dispatch = useDispatch();
     function handleVideoSelect() {
-        dispatch(setVideoSuccess(props.video))
+        dispatch(setVideoRequest(props.video))
     }
     return (
         <div onClick={() => handleVideoSelect()} className=' video-item item'>

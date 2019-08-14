@@ -1,21 +1,14 @@
 import React from 'react';
-import VideoList from '../components/organisms/Video_List';
-import VideoDetail from '../components/molecules/Video_Detail';
-import Header from '../components/organisms/Header'
+import VideoList from '../organisms/Video_List';
+import VideoDetail from '../molecules/Video_Detail';
+import Header from '../organisms/Header'
+import DrawerMenu from '../organisms/DrawerMenu';
 
-function App() {
+function WatchTemplate() {
  return (
         <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <Header/>
-            <div className="mdl-layout__drawer">
-                <span className="mdl-layout-title">Title</span>
-                <nav className="mdl-navigation">
-                    <a className="mdl-navigation__link" href="/">Link</a>
-                    <a className="mdl-navigation__link" href="/">Link</a>
-                    <a className="mdl-navigation__link" href="/">Link</a>
-                    <a className="mdl-navigation__link" href="/">Link</a>
-                </nav>
-            </div>
+            <DrawerMenu/>
             <main className="mdl-layout__content">
                 <div className="page-content">
                     <div className='ui container' style={{ marginTop: '1em' }}>
@@ -35,4 +28,4 @@ function App() {
         </div>
     )
 };
-export default App;
+export default WatchTemplate;
