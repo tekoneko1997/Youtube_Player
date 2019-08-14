@@ -1,10 +1,10 @@
 import React from 'react';
 import VideoList from '../organisms/Video_List';
-import VideoDetail from '../molecules/Video_Detail';
+import VideoItems from '../organisms/VideoItems';
 import Header from '../organisms/Header'
 import DrawerMenu from '../organisms/DrawerMenu';
 
-function WatchTemplate() {
+function WatchTemplate(props) {
  return (
         <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <Header/>
@@ -15,10 +15,10 @@ function WatchTemplate() {
                         <div className='ui grid'>
                             <div className="ui row">
                                 <div className="eleven wide column">
-                                    <VideoDetail/>
+                                    <VideoItems video={props.video} commentList={props.commentList}/>
                                 </div>
                                 <div className="five wide column">
-                                    <VideoList />
+                                    <VideoList videosList={props.videosList}/>
                                 </div>
                             </div>
                         </div>

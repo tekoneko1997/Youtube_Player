@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setVideoRequest } from '../../actions/VideoAction';
 import '../../styles/video.css';
 
-function VideoItem(props){
+const VideoItem = (props) =>{
     const dispatch = useDispatch();
     function handleVideoSelect() {
         dispatch(setVideoRequest(props.video))

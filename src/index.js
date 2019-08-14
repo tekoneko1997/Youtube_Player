@@ -1,7 +1,7 @@
 /* eslint-disable */
 // require('dotenv').config()
 import React from 'react';
-import App from './pages/App';
+import App from './components/pages/App';
 import {render} from 'react-dom';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';

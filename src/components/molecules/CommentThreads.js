@@ -1,11 +1,9 @@
 
 import React from 'react';
-import { useSelector } from "react-redux";
 import CommentItem from '../atoms/CommentItem';
 
-const CommentThreads = () => {
-    const CommentList = useSelector(state => state.CommentThreadsReducer);
-    const renderedComments = CommentList.items===undefined?[]:CommentList.items.map((comment) => {
+const CommentThreads = (props) => {
+    const renderedComments = props.commentList.items===undefined?[]:props.commentList.items.map((comment) => {
         return <CommentItem key={comment.id} comment={comment}/>
     });
 
