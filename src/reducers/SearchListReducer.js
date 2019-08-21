@@ -1,14 +1,15 @@
-const initState = {
-    kind: "youtube#searchListResponse",
-    etag: "",
-    nextPageToken: "",
-    prevPageToken: "",
-    pageInfo: {
-        totalResults: 0,
-        resultsPerPage: 0,
-    },
-    items: []
-}
+// const initState = {
+//     kind: "youtube#searchListResponse",
+//     etag: "",
+//     nextPageToken: "",
+//     prevPageToken: "",
+//     pageInfo: {
+//         totalResults: 0,
+//         resultsPerPage: 0,
+//     },
+//     items: []
+// }
+const initState = [];
 
 export default function SearchListReducer(state = initState, action) {
     switch (action.type) {

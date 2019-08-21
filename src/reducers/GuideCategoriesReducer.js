@@ -10,7 +10,7 @@ const initState = {
     items: []
 }
 
-export default function getGuideCategoriesReducer(state = initState, action) {
+export default function GuideCategoriesReducer(state = initState, action) {
     switch (action.type) {
         case 'GET_GUIDE_CATEGORIES_SUCCESS':
             return {

@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Video = ({ video }) => {
-    //const video = useSelector(state => state.SearchListReducer);
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+const Video = ({ videoId }) => {
+    const videoSrc = `https://www.youtube.com/embed/${videoId}`;
     return (
         <div className='ui embed'>
-            <iframe src={videoSrc} allowFullScreen title='Video player' />
+            <iframe  src={videoSrc} allowFullScreen title='Video player' />
         </div>
     )
 }

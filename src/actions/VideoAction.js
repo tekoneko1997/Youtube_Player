@@ -1,7 +1,7 @@
-export const setVideoRequest = (data) => {
+export const setVideoRequest = (videoId) => {
     return {
       type: 'SET_VIDEO_REQUEST',
-      data,
+      videoId,
     }
 };
 export const setVideoSuccess = (data) => {

@@ -1,12 +1,21 @@
-import { join, put, fork, takeEvery } from 'redux-saga/effects';
-//import { put,takeEvery } from 'redux-saga/effects';
+import { join, put, fork, call, takeEvery } from 'redux-saga/effects';
+import history from '../../helpers/history'
+import { setVideoSuccess, setVideoFailed } from '../../actions/VideoAction';
 import { getCommentThreads } from '../CommentThreads/CommentThreadsSaga';
-import { setVideoSuccess } from '../../actions/VideoAction';
+import VideosApi from '../../apis/VideosApi';
+
+const videosApi = new VideosApi();
 
 function* setVideo(action) {
-    const setCommentsTask = yield fork(getCommentThreads, action.data.id.videoId);
-    yield join(setCommentsTask);
-    yield put(setVideoSuccess(action.data));
+    const response = yield call(videosApi.getVideoRequest, action.videoId);
+    if (response) {
+        const setCommentsTask = yield fork(getCommentThreads, action.videoId);
+        yield join(setCommentsTask);
+        yield put(setVideoSuccess(response.data.items[0]));
+        yield call(history.push, `/Watch?v=${action.videoId}`);
+    }else{
+        yield put(setVideoFailed("Search error"));
+    }
 }
 
 const saga = [

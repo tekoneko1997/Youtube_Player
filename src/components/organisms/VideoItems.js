@@ -2,21 +2,22 @@ import React from 'react';
 import Video from '../atoms/Video';
 import CommentThreads from '../molecules/CommentThreads';
 import VideoDetail from '../molecules/VideoDetail';
+import VideoItemsPlaceholder from '../Placeholder/VideoItemsPlaceholder';
 
 const VideoItems = (props) => {
     if (!props.video) {
-        return <div>Loading ...</div>;
+        return (<VideoItemsPlaceholder/>);
     }
     return (
         <div className="ui relaxed divided list">
             <div className="item">
-            <Video video={props.video} />
+                <Video videoId={props.video.id} />
             </div>
             <div className="item">
-            <VideoDetail video={props.video}/>
+                <VideoDetail video={props.video} />
             </div>
             <div className="item">
-                <CommentThreads commentList={props.commentList}/>
+                <CommentThreads commentList={props.commentList} />
             </div>
         </div>
     )

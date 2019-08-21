@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function SearchBar(props) {
     return (
         <form onSubmit={props.handleSubmit} className='ui form' >

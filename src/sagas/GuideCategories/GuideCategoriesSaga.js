@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
-import { getCommentThreadsSuccess, getCommentThreadsFailed } from '../../actions/CommentsAction'
+import { getGuideCategoriesSuccess, getGuideCategoriesFailed } from '../../actions/GuideCategoriesAction'
 import GuideCategoriesApi from '../../apis/GuideCategoriesApi';
 
 const guideCategoriesApi = new GuideCategoriesApi();
