@@ -5,14 +5,15 @@ https://developers.google.com/youtube/v3/docs/guideCategories/
 import YoutubeHttpClient from './index';
 export default class GuideCategoriesApi {
 
-    async GuideCategories(){
+    async GuideCategories(videoId){
         try {
             return await YoutubeHttpClient.get('/guideCategories', {
                 params: {
-                    part: 'replies,snippet',
-                    key: process.env.REACT_APP_YOUTUBE_API_KEY,
+                    part: 'snippet',
                     regionCode: 'jp',
-                    hl: 'ja'
+                    id: videoId,
+                    hl: 'ja',
+                    key: process.env.REACT_APP_YOUTUBE_API_KEY,
                 }
             })
         } catch (error) {

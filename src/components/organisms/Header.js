@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../molecules/SearchBar'
+import history from '../../helpers/history'
 import { useDispatch } from "react-redux";
 import { getSearchRequest } from '../../actions/SearchAction';
 
@@ -20,6 +21,7 @@ function Header(props) {
     };
     const handleSubmit = e => {
         e.preventDefault();
+        history.push(`/SearchResult?search_query=${term}`)
         dispatch(getSearchRequest(term))
     }
     //useEffectの記述がなんか微妙な(パフォーマンス的に)気がする

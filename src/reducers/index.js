@@ -3,12 +3,14 @@ import SearchListReducer from './SearchListReducer';
 import CommentThreadsReducer from './CommentThreadsReducer'
 import VideoReducer from './VideoReducer';
 import GuideCategoriesReducer from './GuideCategoriesReducer';
+import SearchListByChannelIdReducer from './SearchListByChannelIdReducer'
 
 const reducers = combineReducers({
     CommentThreadsReducer,
     SearchListReducer,
     VideoReducer,
-    GuideCategoriesReducer
+    GuideCategoriesReducer,
+    SearchListByChannelIdReducer
 });
 
 export default reducers

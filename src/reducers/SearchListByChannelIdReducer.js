@@ -10,9 +10,9 @@ const initState = {
     items: []
 }
 
-export default function SearchListReducer(state = initState, action) {
+export default function SearchListByChannelIdReducer(state = initState, action) {
     switch (action.type) {
-        case 'GET_SEARCH_SUCCESS':
+        case 'GET_SEARCH_CHANNELID_SUCCESS':
             return {
                 ...action.data,
                 items:[...state.items, ...action.data.items]

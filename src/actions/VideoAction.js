@@ -1,7 +1,9 @@
-export const setVideoRequest = (videoId) => {
+export const setVideoRequest = (videoId, channelId = "",pageToken='') => {
     return {
       type: 'SET_VIDEO_REQUEST',
       videoId,
+      channelId,
+      pageToken,
     }
 };
 export const setVideoSuccess = (data) => {
