@@ -10,11 +10,11 @@ e.t.c
 ### 使用している技術
 
 - **CSS**
- - [Material Design Lite](https://getmdl.io/)
- - [SemanticUI](https://semantic-ui.com/)
+   - [Material Design Lite](https://getmdl.io/)
+   - [SemanticUI](https://semantic-ui.com/)
  
 - **API**
- - [Youtube Data API](https://developers.google.com/youtube/v3/getting-started?hl=ja)
+   - [Youtube Data API](https://developers.google.com/youtube/v3/getting-started?hl=ja)
 
 ### ScreenShot & Gif movie
 
@@ -28,8 +28,7 @@ e.t.c
 ![Placeholder](https://gyazo.com/d7b4b58cf1f8222743f93a4609937c27/raw)
 
 - infinite Scrolling
-![infinite Scrolling](https://gyazo.com/0a9e50433640d45112eb98bffcf900b5/raw)
-
+![infinite](https://i.imgur.com/Du1oOH4.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
