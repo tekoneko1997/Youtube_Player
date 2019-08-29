@@ -1,3 +1,36 @@
+## Youtube Player
+
+### 作成した機能
+
+- 検索機能
+- コメント表示
+- 動画表示
+e.t.c
+
+### 使用している技術
+
+- **CSS**
+ - [Material Design Lite](https://getmdl.io/)
+ - [SemanticUI](https://semantic-ui.com/)
+ 
+- **API**
+ - [Youtube Data API](https://developers.google.com/youtube/v3/getting-started?hl=ja)
+
+### ScreenShot & Gif movie
+
+- Search Result
+![Search_Result](https://i.imgur.com/iYUN9Zt.png)
+
+- Watch Page
+![Watch_Page](https://i.imgur.com/Q6cwnpY.jpg)
+
+- Placeholder
+![Placeholder](https://gyazo.com/d7b4b58cf1f8222743f93a4609937c27/raw)
+
+- infinite Scrolling
+![infinite Scrolling](https://gyazo.com/0a9e50433640d45112eb98bffcf900b5/raw)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
