@@ -8,6 +8,11 @@
 e.t.c
 
 ### 使用している技術
+- 
+   - React(React-hooks)
+   - Redux(Redux-hooks)
+   - Redux-Saga
+   - Axios
 
 - **CSS**
    - [Material Design Lite](https://getmdl.io/)
